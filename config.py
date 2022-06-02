@@ -22,6 +22,10 @@ MAIL_PORT ='465'
 MAIL_USE_TLS =False
 MAIL_USE_SSL =True
 MAIL_DEBUG =True
-MAIL_USERNAME ='liuchangxingparis@163.com'
-MAIL_PASSWORD ='OKLIWEYYWGWIYAXO'
-MAIL_DEFAULT_SENDER ='liuchangxingparis@163.com'
+# 一下替换成自己的
+# 邮箱地址
+MAIL_USERNAME ='************'
+# 授权码
+MAIL_PASSWORD ='**********'
+# 默认发送者
+MAIL_DEFAULT_SENDER ='**********'
