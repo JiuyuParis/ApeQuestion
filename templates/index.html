@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}
+    猿问答
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='/css/index.css') }}">
+    <script src="{{url_for('static',filename='/bootstrap/js/bootstrap.bundle.js') }}"></script>
+    <script>
+        if(location.search.includes('public=True')){
+            alert("发布问题成功")
+        }
+    </script>
+{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+            <ul class="question-ul">
+                {% for question in question_list %}
+                    <li>
+                        <div class="side-question">
+                            <img class="side-question-avatar" src="{{ url_for('static',filename='/img/ape.png') }}"/>
+                        </div>
+                        <div class="question-main">
+                            <div class="question-title">
+                                <a href="{{ url_for('question.question_detail',question_id=question.id) }}">{{ question.title }}</a>
+                            </div>
+                            <div class="question-content text-truncate">{{ question.content }}</div>
+                            <div class="question-detail">
+                                <span class="question-author">{{ question.user.username }}</span>
+                                <span style="font-size: small">{{ question.public_time }}</span>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col"></div>
+    </div>
+{% endblock %}
