@@ -24,8 +24,8 @@ MAIL_USE_SSL =True
 MAIL_DEBUG =True
 # 一下替换成自己的
 # 邮箱地址
-MAIL_USERNAME ='************'
+MAIL_USERNAME ='liuchangxingparis@163.com'
 # 授权码
-MAIL_PASSWORD ='**********'
+MAIL_PASSWORD ='OKLIWEYYWGWIYAXO'
 # 默认发送者
-MAIL_DEFAULT_SENDER ='**********'
+MAIL_DEFAULT_SENDER ='liuchangxingparis@163.com'
